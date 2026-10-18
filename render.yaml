@@ -1,0 +1,10 @@
+services:
+  - type: worker
+    name: telegram-media-downloader-bot
+    env: docker
+    dockerfilePath: Dockerfile
+    plan: free
+    region: singapore
+    envVars:
+      - key: BOT_TOKEN
+        sync: false

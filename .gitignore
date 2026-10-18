@@ -1,0 +1,37 @@
+# Environment & Rahasia
+.env
+.env*.local
+*.env
+cookies.txt
+*.cookie
+*.cookies
+
+# File Media & Download Sementara
+downloads/
+*.mp4
+*.mp3
+*.flac
+*.webm
+*.m4a
+*.opus
+
+# Log & Debug
+*.log
+bot.log
+logs/
+
+# Python Cache & Virtual Environment
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+ENV/
+
+# IDE & Editor
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db

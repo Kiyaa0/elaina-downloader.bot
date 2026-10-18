@@ -1,0 +1,6 @@
+yt-dlp
+python-telegram-bot[job-queue]>=20.0
+python-dotenv
+imageio-ffmpeg
+SpotiFLAC
+spotdl
