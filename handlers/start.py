@@ -103,7 +103,7 @@ async def vip_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
     """
     Handler untuk perintah /vip: panduan donasi dan redeem voucher VIP.
     """
-    from config import TRAKTEER_URL
+    from config import TRAKTEER_URL, ADMIN_CONTACT
     pesan = (
         "⭐ <b>PROGRAM VIP MEMBER (UNLIMITED ACCESS)</b>\n\n"
         "Nikmati fitur eksklusif tanpa batasan:\n"
@@ -113,17 +113,16 @@ async def vip_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
         "• 🎬 <b>Resolusi Tertinggi:</b> Mendukung hingga Full HD 1080p & FLAC Lossless.\n"
         "• 📦 <b>File Besar:</b> Dukungan transfer hingga 2.000 MB (2 GB).\n\n"
         "💰 <b>Biaya VIP:</b> <b>Rp 10.000 / Bulan</b>\n\n"
-        f"💳 <b>Cara Berlangganan via Trakteer:</b>\n"
-        f"1. Buka halaman Trakteer kami: <a href='{TRAKTEER_URL}'>teer.id/Kiyawi</a>\n"
-        "2. Traktir nominal <b>Rp 10.000</b> (untuk 1 bulan VIP).\n"
-        "3. Cantumkan <b>Username / User ID Telegram</b> Anda pada pesan dukungan.\n"
-        "4. Anda akan menerima <b>Kode Voucher Unik</b> dari Admin.\n"
-        "5. Masukkan kode voucher Anda dengan mengetik:\n"
+        "💳 <b>Cara Berlangganan:</b>\n"
+        f"1. Traktir <b>Rp 10.000</b> di Trakteer: <a href='{TRAKTEER_URL}'>teer.id/Kiyawi</a>\n"
+        "2. Setelah traktir, <b>silakan hubungi Admin</b> untuk konfirmasi dan mendapatkan Kode Voucher Unik VIP Anda.\n"
+        "3. Masukkan kode voucher Anda dengan mengetik:\n"
         "   <code>/redeem KODE-VOUCHER-ANDA</code>\n\n"
         f"🆔 <b>User ID Anda:</b> <code>{update.effective_user.id}</code>"
     )
     keyboard = InlineKeyboardMarkup([
-        [InlineKeyboardButton("☕ Dukung & Beli VIP di teer.id/Kiyawi", url=TRAKTEER_URL)]
+        [InlineKeyboardButton("☕ Dukung di teer.id/Kiyawi", url=TRAKTEER_URL)],
+        [InlineKeyboardButton("💬 Hubungi Admin (Klaim VIP)", url=ADMIN_CONTACT)]
     ])
     await update.message.reply_text(pesan, reply_markup=keyboard, parse_mode="HTML")
 

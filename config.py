@@ -19,6 +19,9 @@ TRAKTEER_URL = os.getenv("TRAKTEER_URL", "https://trakteer.id/Kiyawi").strip()
 TRAKTEER_WEBHOOK_SECRET = os.getenv("TRAKTEER_WEBHOOK_SECRET", "").strip()
 TRAKTEER_WEBHOOK_PORT = int(os.getenv("TRAKTEER_WEBHOOK_PORT", "8080"))
 
+# Konfigurasi Kontak Admin
+ADMIN_CONTACT = os.getenv("ADMIN_CONTACT", "https://t.me/Kiyawi").strip()
+
 # Direktori Penyimpanan Download Sementara
 BASE_DIR = Path(__file__).resolve().parent
 DOWNLOAD_DIR = str(BASE_DIR / "downloads")
