@@ -115,14 +115,14 @@ async def vip_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
         "💰 <b>Biaya VIP:</b> <b>Rp 10.000 / Bulan</b>\n\n"
         "💳 <b>Cara Berlangganan:</b>\n"
         f"1. Traktir <b>Rp 10.000</b> di Trakteer: <a href='{TRAKTEER_URL}'>teer.id/Kiyawi</a>\n"
-        "2. Setelah traktir, <b>silakan hubungi Admin</b> untuk konfirmasi dan mendapatkan Kode Voucher Unik VIP Anda.\n"
+        "2. Setelah traktir, <b>silakan hubungi Admin</b> (@Kiyaawi) untuk mendapatkan Kode Voucher Unik VIP Anda.\n"
         "3. Masukkan kode voucher Anda dengan mengetik:\n"
         "   <code>/redeem KODE-VOUCHER-ANDA</code>\n\n"
         f"🆔 <b>User ID Anda:</b> <code>{update.effective_user.id}</code>"
     )
     keyboard = InlineKeyboardMarkup([
         [InlineKeyboardButton("☕ Dukung di teer.id/Kiyawi", url=TRAKTEER_URL)],
-        [InlineKeyboardButton("💬 Hubungi Admin (Klaim VIP)", url=ADMIN_CONTACT)]
+        [InlineKeyboardButton("💬 Hubungi Admin (@Kiyaawi)", url=ADMIN_CONTACT)]
     ])
     await update.message.reply_text(pesan, reply_markup=keyboard, parse_mode="HTML")
 
