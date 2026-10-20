@@ -30,8 +30,25 @@ env/
 ENV/
 
 # IDE & Editor
+.vscode/
 .idea/
 *.swp
 *.swo
 .DS_Store
 Thumbs.db
+
+# Database & Sessions
+database.db
+database.db-shm
+database.db-wal
+database.db-journal
+*.db
+*.db-shm
+*.db-wal
+*.db-journal
+*.sqlite
+*.sqlite3
+*.sqlite-shm
+*.sqlite-wal
+*.session
+*.session-journal
